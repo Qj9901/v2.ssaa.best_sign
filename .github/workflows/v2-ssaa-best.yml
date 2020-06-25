@@ -25,6 +25,6 @@ jobs:
 
     - name: 'Get points'
       env:
-        HOSTLOC_USERNAME: ${{ secrets.EMAIL }}
-        HOSTLOC_PASSWORD: ${{ secrets.PWD }}
+        EMAIL: ${{ secrets.EMAIL }}
+        PWD: ${{ secrets.PWD }}
       run: python auto_qian_v2.py
