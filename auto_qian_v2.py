@@ -34,15 +34,15 @@ def Check_in(emaill, passwd):
         #print(simplejson.loads(req.text)['msg'])
         
         # 查询详细信息
-        try:
+        #try:
             #tryy = simplejson.loads(req.text)["traffic"]
-            print(simplejson.loads(req.text)['msg'])
-            print('总流量：' + simplejson.loads(req.text)["traffic"])
-            print('今日已用流量：' + simplejson.loads(req.text)["trafficInfo"]["todayUsedTraffic"])
-            print('过去已用流量：' + simplejson.loads(req.text)["trafficInfo"]["lastUsedTraffic"])
-            print('账户剩余流量：' + simplejson.loads(req.text)["trafficInfo"]["unUsedTraffic"])
-        except:
-            print(simplejson.loads(req.text)['msg'])
+            #print(simplejson.loads(req.text)['msg'])
+            #print('总流量：' + simplejson.loads(req.text)["traffic"])
+            #print('今日已用流量：' + simplejson.loads(req.text)["trafficInfo"]["todayUsedTraffic"])
+            #print('过去已用流量：' + simplejson.loads(req.text)["trafficInfo"]["lastUsedTraffic"])
+            #print('账户剩余流量：' + simplejson.loads(req.text)["trafficInfo"]["unUsedTraffic"])
+        #except:
+            #print(simplejson.loads(req.text)['msg'])
     else:
         print('当前无法签到',banornot.status_code)
 
