@@ -35,7 +35,7 @@ def Check_in(emaill, passwd):
         
         # 查询详细信息
         try:
-            tryy = simplejson.loads(req.text)["traffic"]
+            #tryy = simplejson.loads(req.text)["traffic"]
             print(simplejson.loads(req.text)['msg'])
             print('总流量：' + simplejson.loads(req.text)["traffic"])
             print('今日已用流量：' + simplejson.loads(req.text)["trafficInfo"]["todayUsedTraffic"])
