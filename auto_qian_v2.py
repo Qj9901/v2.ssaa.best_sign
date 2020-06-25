@@ -1,5 +1,5 @@
 import requests,time,os
-import json as simplejson
+import simplejson
 def Check_in(emaill, passwd):
 
     url = 'https://v2.ssaa.best/'
