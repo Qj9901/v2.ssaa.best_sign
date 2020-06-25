@@ -1,0 +1,30 @@
+name: 'v2.ssaa.best-sign'
+
+on:
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 17 * * *'
+
+jobs:
+  get_points:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+
+    - name: 'Set python'
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+
+    - name: 'Install dependencies'
+      run: pip install -r requirements.txt
+
+    - name: 'Get points'
+      env:
+        HOSTLOC_USERNAME: ${{ secrets.EMAIL }}
+        HOSTLOC_PASSWORD: ${{ secrets.PWD }}
+      run: python auto_qian_v2.py
