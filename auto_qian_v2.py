@@ -55,6 +55,6 @@ if __name__=='__main__':
     }]
     for user in users:
         print(user['email'], user['passwd'])
-        Check_in(user['email'], user['passwd'])
+       # Check_in(user['email'], user['passwd'])
     print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 
